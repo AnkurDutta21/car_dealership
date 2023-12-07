@@ -90,8 +90,15 @@ margin: auto;
 .hero-bnr{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     background-color: #151515;
+}
+@media only screen and (min-width:600px){
+    .hero-bnr{
+        width: 80%;
+    margin: auto;
+    }
 }
 .text-top {
     font-size: calc(2.35rem + 2vw);
@@ -101,16 +108,88 @@ margin: auto;
     font-size: calc(2.35rem + 2vw);
     color: #fff;
 }
-.bnr-wrp{
+.bnr-wrp {
     display: flex;
     color: #fff;
-    flex-direction: column;
     flex-wrap: wrap;
-
+    flex-direction: column;
+    align-items: center;
 }
-.hero-img{
-    width: 30%;
-    height: 60%;
+.bnr-left{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3vw;
+}
+.bnr-left p {
+    font-size: calc(0.5rem + 1vw);
+    width: 81%;
+    margin: 3vw auto;
+   
+}
+@media only screen and (min-width:600px){
+   
+    .bnr-wrp{
+        display: flex;
+        color: #fff;    
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .bnr-left{
+        width: 50%;
+        margin: 2vw 2vw;
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+        text-align: left;
+    }
+    .bnr-left p {
+        font-size: calc(0.5rem + 1vw);
+        width: 100%;
+        margin-left: 4vw;
+    }
+}
+.bnr-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin: auto;
+    width: 28%;
+    margin: auto;
+}
+.explore {
+    display: flex;
+    align-items: center;
+    padding: 2% 7%;
+    border-radius: 1.3rem;
+    gap: 10px;
+    background: #fff;
+    font-weight: 700;
+    font-size: calc(0.5rem + 1vw);
+    justify-content: center;
+}
+.explore i{
+    color: #980000;
+}
+.contact{
+    padding: 2% 7%;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 1.3rem;
+    font-size: calc(0.5rem + 1vw);
+}
+.bnr-img{
+    width: 80%; 
+}
+.hero-img {
+    max-width: 100%;
+    position: relative; 
+    top: 14vw; 
+
 }
 .hero-img img{
     width: 100%;
@@ -119,11 +198,31 @@ margin: auto;
 }
 .red-lines{
     width: 100%;
+    background-color: #fff;
 }
 .red-lines img{
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+@media only screen and (min-width:600px){
+    .bnr-img{
+        width: 65%; 
+    }
+    .bnr-buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+        margin: auto;
+        width: 80%;
+        
+    }
+    .hero-img {
+        max-width: 100%;
+        position: relative; 
+        top: 10vw; 
+    
+    }
 }
 
 /* hero section end */
